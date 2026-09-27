@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "er-00002",
+  "agent_id": "agent-a1",
+  "actor_chain": ["human-owner", "agent-a1", "tool-http-post"],
+  "timestamp": "2026-08-01T09:15:03Z",
+  "observation": {
+    "source": "gateway_proxy",
+    "relationship": "corroborating",
+    "directness": "direct_observation"
+  },
+  "verification": {
+    "vantage": "substrate",
+    "method": "intercepted",
+    "basis": "substrate_intercepted",
+    "basis_engines": ["gateway_proxy", "sandbox"]
+  },
+  "grade": "E2",
+  "claims": [
+    {
+      "claim": "emission-conformant",
+      "evidence": ["er-00002"]
+    }
+  ],
+  "reconciliation": {
+    "agent_claim": "agent called api.example.com once",
+    "boundary_observation": "gateway recorded one POST to api.example.com",
+    "state": "agreement"
+  },
+  "integrity": {
+    "signed": true,
+    "chain_linked": true,
+    "timestamped": false
+  },
+  "declared_vs_observed": {
+    "permitted": "POST to api.example.com",
+    "occurred": "one POST observed at gateway"
+  },
+  "sampling": {
+    "sampled": false,
+    "audit_required": true
+  },
+  "provenance": []
+}

@@ -1,0 +1,259 @@
+{
+  "artifact_type": "evidence-record",
+  "canonicalization": "jcs (RFC 8785, plain - no member removal, no code-point key sort; keys sorted per RFC 8785 section 3.2.3)",
+  "version": "0.1",
+  "source_commit": null,
+  "positive": [
+    {
+      "id": "er-kat-01-e0-self-report",
+      "description": "Derived identifier = SHA-256 over the JCS canonical form of the full evidence record (14-member closed field set per evidence-record-0.1.schema.json; exclusion set empty; no domain separation). E0 self-report sample.",
+      "input_file": "samples/er-00001-e0-self-report.json",
+      "canonical_bytes_hex": "7b226163746f725f636861696e223a5b2268756d616e2d6f776e6572222c226167656e742d6131222c22746f6f6c2d66696c652d7772697465225d2c226167656e745f6964223a226167656e742d6131222c22636c61696d73223a5b5d2c226465636c617265645f76735f6f62736572766564223a7b226f63637572726564223a22636c61696d6564206279206167656e742c206e6f7420696e646570656e64656e746c79206f62736572766564222c227065726d6974746564223a227772697465202f6574632f6170702f636f6e6669672e6a736f6e227d2c226772616465223a224530222c22696e74656772697479223a7b22636861696e5f6c696e6b6564223a66616c73652c227369676e6564223a66616c73652c2274696d657374616d706564223a66616c73657d2c226f62736572766174696f6e223a7b226469726563746e657373223a226469726563745f6f62736572766174696f6e222c2272656c6174696f6e73686970223a22646972656374222c22736f75726365223a226167656e745f73656c665f7265706f7274227d2c2270726f76656e616e6365223a5b5d2c227265636f6e63696c696174696f6e223a7b226167656e745f636c61696d223a226167656e742077726f746520636f6e6669672066696c65222c22626f756e646172795f6f62736572766174696f6e223a226e6f6e65207265636f72646564222c227374617465223a226e6f5f696e646570656e64656e745f65766964656e6365227d2c227265636f72645f6964223a2265722d3030303031222c2273616d706c696e67223a7b2261756469745f7265717569726564223a747275652c2273616d706c6564223a66616c73657d2c22736368656d615f76657273696f6e223a22302e312e30222c2274696d657374616d70223a22323032362d30382d30315430393a31353a30305a222c22766572696669636174696f6e223a7b226261736973223a2261727469666163745f696e746572636570746564222c2262617369735f656e67696e6573223a5b2273656c665f7265706f7274225d2c226d6574686f64223a22696e746572636570746564222c2276616e74616765223a226172746966616374227d7d",
+      "canonical_length_bytes": 810,
+      "expected_digest_bare_hex": "f0d60fe6926c283702d7a14159893ba54270f499d49d4d09dffecb081e98ba3f"
+    },
+    {
+      "id": "er-kat-02-e2-emission-conformant",
+      "description": "Same digest context over the E2 emission-conformant sample.",
+      "input_file": "samples/er-00002-e2-emission-conformant.json",
+      "canonical_length_bytes": 887,
+      "expected_digest_bare_hex": "283e363d9ce385c28c7587fff1803aa2b1520f3034e9a1fbcadc8cd2eb5e45c6",
+      "canonical_bytes_hex": "7b226163746f725f636861696e223a5b2268756d616e2d6f776e6572222c226167656e742d6131222c22746f6f6c2d687474702d706f7374225d2c226167656e745f6964223a226167656e742d6131222c22636c61696d73223a5b7b22636c61696d223a22656d697373696f6e2d636f6e666f726d616e74222c2265766964656e6365223a5b2265722d3030303032225d7d5d2c226465636c617265645f76735f6f62736572766564223a7b226f63637572726564223a226f6e6520504f5354206f627365727665642061742067617465776179222c227065726d6974746564223a22504f535420746f206170692e6578616d706c652e636f6d227d2c226772616465223a224532222c22696e74656772697479223a7b22636861696e5f6c696e6b6564223a747275652c227369676e6564223a747275652c2274696d657374616d706564223a66616c73657d2c226f62736572766174696f6e223a7b226469726563746e657373223a226469726563745f6f62736572766174696f6e222c2272656c6174696f6e73686970223a22636f72726f626f726174696e67222c22736f75726365223a22676174657761795f70726f7879227d2c2270726f76656e616e6365223a5b5d2c227265636f6e63696c696174696f6e223a7b226167656e745f636c61696d223a226167656e742063616c6c6564206170692e6578616d706c652e636f6d206f6e6365222c22626f756e646172795f6f62736572766174696f6e223a2267617465776179207265636f72646564206f6e6520504f535420746f206170692e6578616d706c652e636f6d222c227374617465223a2261677265656d656e74227d2c227265636f72645f6964223a2265722d3030303032222c2273616d706c696e67223a7b2261756469745f7265717569726564223a747275652c2273616d706c6564223a66616c73657d2c22736368656d615f76657273696f6e223a22302e312e30222c2274696d657374616d70223a22323032362d30382d30315430393a31353a30335a222c22766572696669636174696f6e223a7b226261736973223a227375627374726174655f696e746572636570746564222c2262617369735f656e67696e6573223a5b22676174657761795f70726f7879222c2273616e64626f78225d2c226d6574686f64223a22696e746572636570746564222c2276616e74616765223a22737562737472617465227d7d"
+    },
+    {
+      "id": "er-kat-03-e4-operationally-conformant",
+      "description": "Same digest context over the E4 operationally-conformant sample (full integrity markers, independent verifier identifiers).",
+      "input_file": "samples/er-00003-e4-operationally-conformant.json",
+      "canonical_length_bytes": 1047,
+      "expected_digest_bare_hex": "c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1",
+      "canonical_bytes_hex": "7b226163746f725f636861696e223a5b2268756d616e2d6f776e6572222c226167656e742d6237222c22746f6f6c2d7061796d656e74225d2c226167656e745f6964223a226167656e742d6237222c22636c61696d73223a5b7b22636c61696d223a22656d697373696f6e2d636f6e666f726d616e74222c2265766964656e6365223a5b2265722d3030303033225d7d2c7b22636c61696d223a226f7065726174696f6e616c6c792d636f6e666f726d616e74222c2265766964656e6365223a5b2265722d3030303033222c2265722d303030303361225d7d5d2c226465636c617265645f76735f6f62736572766564223a7b226f63637572726564223a226f6e652024313030207472616e73666572206f627365727665642062792070726f636573736f72222c227065726d6974746564223a227472616e7366657220757020746f202435303020746f2076656e646f72227d2c226772616465223a224534222c22696e74656772697479223a7b22636861696e5f6c696e6b6564223a747275652c227369676e6564223a747275652c2274696d657374616d706564223a747275652c2276657269666961626c655f6279223a5b2276657269666965722d7075626c6963222c2261756469746f722d61636d65225d7d2c226f62736572766174696f6e223a7b226469726563746e657373223a226469726563745f6f62736572766174696f6e222c2272656c6174696f6e73686970223a22636f72726f626f726174696e67222c22736f75726365223a2265787465726e616c5f617574686f72697479227d2c2270726f76656e616e6365223a5b2265722d303030303361225d2c227265636f6e63696c696174696f6e223a7b226167656e745f636c61696d223a226167656e74207472616e73666572726564202431303020746f2076656e646f72222c22626f756e646172795f6f62736572766174696f6e223a227061796d656e742070726f636573736f7220636f6e6669726d732024313030207472616e73666572222c227374617465223a2261677265656d656e74227d2c227265636f72645f6964223a2265722d3030303033222c2273616d706c696e67223a7b2261756469745f7265717569726564223a747275652c2273616d706c6564223a66616c73657d2c22736368656d615f76657273696f6e223a22302e312e30222c2274696d657374616d70223a22323032362d30382d30325431343a32323a34315a222c22766572696669636174696f6e223a7b226261736973223a227375627374726174655f696e746572636570746564222c2262617369735f656e67696e6573223a5b2265787465726e616c5f617574686f72697479222c22676174657761795f70726f7879225d2c226d6574686f64223a22696e746572636570746564222c2276616e74616765223a22737562737472617465227d7d"
+    },
+    {
+      "id": "er-kat-04-e3-contradiction",
+      "description": "Same digest context over the E3 contradiction sample (reconciliation.state = contradiction).",
+      "input_file": "samples/er-00004-e3-contradiction.json",
+      "canonical_length_bytes": 873,
+      "expected_digest_bare_hex": "2a9af62bddd1513f8cdaa3c7046e8b921e87f700caff67ca14cd0d174c2b7aa7",
+      "canonical_bytes_hex": "7b226163746f725f636861696e223a5b2268756d616e2d6f776e6572222c226167656e742d6332222c22746f6f6c2d737368225d2c226167656e745f6964223a226167656e742d6332222c22636c61696d73223a5b7b22636c61696d223a22656d697373696f6e2d636f6e666f726d616e74222c2265766964656e6365223a5b2265722d3030303034225d7d5d2c226465636c617265645f76735f6f62736572766564223a7b226f63637572726564223a2253534820746f2070726f6420686f7374206f62736572766564222c227065726d6974746564223a2253534820746f2073746167696e67206f6e6c79227d2c226772616465223a224533222c22696e74656772697479223a7b22636861696e5f6c696e6b6564223a747275652c227369676e6564223a747275652c2274696d657374616d706564223a747275657d2c226f62736572766174696f6e223a7b226469726563746e657373223a226469726563745f6f62736572766174696f6e222c2272656c6174696f6e73686970223a22636f6e747261646963746f7279222c22736f75726365223a22676174657761795f70726f7879227d2c2270726f76656e616e6365223a5b5d2c227265636f6e63696c696174696f6e223a7b226167656e745f636c61696d223a226167656e7420646964206e6f74206163636573732070726f6420686f7374222c22626f756e646172795f6f62736572766174696f6e223a2267617465776179207265636f726465642053534820636f6e6e656374696f6e20746f2070726f6420686f73742061742030333a3437222c227374617465223a22636f6e74726164696374696f6e227d2c227265636f72645f6964223a2265722d3030303034222c2273616d706c696e67223a7b2261756469745f7265717569726564223a747275652c2273616d706c6564223a66616c73657d2c22736368656d615f76657273696f6e223a22302e312e30222c2274696d657374616d70223a22323032362d30382d30335430333a34373a31325a222c22766572696669636174696f6e223a7b226261736973223a227375627374726174655f696e746572636570746564222c2262617369735f656e67696e6573223a5b22676174657761795f70726f7879225d2c226d6574686f64223a22696e746572636570746564222c2276616e74616765223a22737562737472617465227d7d"
+    },
+    {
+      "id": "er-kat-05-e3-derived-reconstructed",
+      "description": "Same digest context over the E3 derived/reconstructed sample (observation.relationship = derived, provenance present).",
+      "input_file": "samples/er-00005-e3-derived-reconstructed.json",
+      "canonical_length_bytes": 939,
+      "expected_digest_bare_hex": "c914624093331a20b37018c9738c2935d75c09475ecb74e16e7f418cf3c4402f",
+      "canonical_bytes_hex": "7b226163746f725f636861696e223a5b2268756d616e2d6f776e6572222c226167656e742d6439222c22746f6f6c2d64622d7175657279225d2c226167656e745f6964223a226167656e742d6439222c22636c61696d73223a5b7b22636c61696d223a22656d697373696f6e2d636f6e666f726d616e74222c2265766964656e6365223a5b2265722d3030303035222c2265722d303030303561222c2265722d303030303562225d7d5d2c226465636c617265645f76735f6f62736572766564223a7b226f63637572726564223a227175657279206f6273657276656420696e2073656e736f72206c6f677320287265636f6e737472756374656429222c227065726d6974746564223a22717565727920637573746f6d6572207461626c65227d2c226772616465223a224533222c22696e74656772697479223a7b22636861696e5f6c696e6b6564223a747275652c227369676e6564223a747275652c2274696d657374616d706564223a747275657d2c226f62736572766174696f6e223a7b226469726563746e657373223a22696e666572726564222c2272656c6174696f6e73686970223a2264657269766564222c22736f75726365223a2273656375726974795f73656e736f72227d2c2270726f76656e616e6365223a5b2265722d303030303561222c2265722d303030303562225d2c227265636f6e63696c696174696f6e223a7b226167656e745f636c61696d223a226167656e74207175657269656420637573746f6d6572207461626c65222c22626f756e646172795f6f62736572766174696f6e223a227265636f6e73747275637465642066726f6d2073656375726974792073656e736f72206c6f6773222c227374617465223a2261677265656d656e74227d2c227265636f72645f6964223a2265722d3030303035222c2273616d706c696e67223a7b2261756469745f7265717569726564223a747275652c2273616d706c6564223a66616c73657d2c22736368656d615f76657273696f6e223a22302e312e30222c2274696d657374616d70223a22323032362d30382d30345431313a30333a35355a222c22766572696669636174696f6e223a7b226261736973223a227375627374726174655f7265636f6e7374727563746564222c2262617369735f656e67696e6573223a5b2273656375726974795f73656e736f72222c2265787465726e616c5f617574686f72697479225d2c226d6574686f64223a227265636f6e7374727563746564222c2276616e74616765223a22737562737472617465227d7d"
+    }
+  ],
+  "negative": [
+    {
+      "id": "er-fail-01-unregistered-grade",
+      "description": "Closed vocabulary: grade is E0-E4 only. A record carrying grade \"E5\" MUST be rejected at validation, not digested as an unknown-but-tolerated value. This is the deliberate inversion of the CPB never-reject invariant (Capsule section 4): an unrecognised value is a failure, not a new rung.",
+      "input": {
+        "schema_version": "0.1.0",
+        "record_id": "er-fail-01",
+        "agent_id": "agent-x",
+        "actor_chain": [
+          "human-owner",
+          "agent-x"
+        ],
+        "timestamp": "2026-08-28T10:00:00+00:00",
+        "observation": {
+          "source": "agent_self_report",
+          "relationship": "direct",
+          "directness": "direct_observation"
+        },
+        "verification": {
+          "vantage": "artifact",
+          "method": "intercepted",
+          "basis": "artifact_intercepted",
+          "basis_engines": []
+        },
+        "grade": "E5",
+        "claims": [],
+        "reconciliation": {
+          "agent_claim": "x",
+          "boundary_observation": "",
+          "state": "no_independent_evidence"
+        },
+        "integrity": {
+          "signed": false,
+          "chain_linked": false,
+          "timestamped": false
+        },
+        "declared_vs_observed": {
+          "permitted": "",
+          "occurred": ""
+        },
+        "sampling": {
+          "sampled": false,
+          "audit_required": false
+        },
+        "provenance": []
+      },
+      "expected": "REJECT (grade not in [E0, E1, E2, E3, E4])"
+    },
+    {
+      "id": "er-fail-02-unregistered-reconciliation-state",
+      "description": "THE CLOSED-VOCABULARY DISCRIMINATOR. reconciliation.state is exactly agreement | contradiction | no_independent_evidence. An unknown state (here \"maybe\") MUST be rejected, not treated as informational. Neither neighbour artifact type (agent-action-capsule, machine-mandate) declares a closed reconciliation vocabulary, so a verifier that accepted unknown values would pass their cases and fail this one.",
+      "input": {
+        "schema_version": "0.1.0",
+        "record_id": "er-fail-02",
+        "agent_id": "agent-x",
+        "actor_chain": [
+          "human-owner",
+          "agent-x"
+        ],
+        "timestamp": "2026-08-28T10:00:00+00:00",
+        "observation": {
+          "source": "agent_self_report",
+          "relationship": "direct",
+          "directness": "direct_observation"
+        },
+        "verification": {
+          "vantage": "artifact",
+          "method": "intercepted",
+          "basis": "artifact_intercepted",
+          "basis_engines": []
+        },
+        "grade": "E0",
+        "claims": [],
+        "reconciliation": {
+          "agent_claim": "x",
+          "boundary_observation": "",
+          "state": "maybe"
+        },
+        "integrity": {
+          "signed": false,
+          "chain_linked": false,
+          "timestamped": false
+        },
+        "declared_vs_observed": {
+          "permitted": "",
+          "occurred": ""
+        },
+        "sampling": {
+          "sampled": false,
+          "audit_required": false
+        },
+        "provenance": []
+      },
+      "expected": "REJECT (reconciliation.state not in [agreement, contradiction, no_independent_evidence])"
+    },
+    {
+      "id": "er-fail-03-unregistered-observation-relationship",
+      "description": "observation.relationship is exactly direct | corroborating | contradictory | derived. Unknown value MUST be rejected.",
+      "input": {
+        "schema_version": "0.1.0",
+        "record_id": "er-fail-03",
+        "agent_id": "agent-x",
+        "actor_chain": [
+          "human-owner",
+          "agent-x"
+        ],
+        "timestamp": "2026-08-28T10:00:00+00:00",
+        "observation": {
+          "source": "agent_self_report",
+          "relationship": "maybe-related",
+          "directness": "direct_observation"
+        },
+        "verification": {
+          "vantage": "artifact",
+          "method": "intercepted",
+          "basis": "artifact_intercepted",
+          "basis_engines": []
+        },
+        "grade": "E0",
+        "claims": [],
+        "reconciliation": {
+          "agent_claim": "x",
+          "boundary_observation": "",
+          "state": "no_independent_evidence"
+        },
+        "integrity": {
+          "signed": false,
+          "chain_linked": false,
+          "timestamped": false
+        },
+        "declared_vs_observed": {
+          "permitted": "",
+          "occurred": ""
+        },
+        "sampling": {
+          "sampled": false,
+          "audit_required": false
+        },
+        "provenance": []
+      },
+      "expected": "REJECT (observation.relationship not in [direct, corroborating, contradictory, derived])"
+    },
+    {
+      "id": "er-fail-04-float-member",
+      "description": "The schema has NO numeric members; a floating-point value anywhere is a schema violation and MUST be rejected, not serialized. Pins that the field set is closed and number-free.",
+      "input": {
+        "schema_version": "0.1.0",
+        "record_id": "er-fail-04",
+        "agent_id": "agent-x",
+        "actor_chain": [
+          "human-owner",
+          "agent-x"
+        ],
+        "timestamp": "2026-08-28T10:00:00+00:00",
+        "observation": {
+          "source": "agent_self_report",
+          "relationship": "direct",
+          "directness": "direct_observation",
+          "confidence": 0.95
+        },
+        "verification": {
+          "vantage": "artifact",
+          "method": "intercepted",
+          "basis": "artifact_intercepted",
+          "basis_engines": []
+        },
+        "grade": "E0",
+        "claims": [],
+        "reconciliation": {
+          "agent_claim": "x",
+          "boundary_observation": "",
+          "state": "no_independent_evidence"
+        },
+        "integrity": {
+          "signed": false,
+          "chain_linked": false,
+          "timestamped": false
+        },
+        "declared_vs_observed": {
+          "permitted": "",
+          "occurred": ""
+        },
+        "sampling": {
+          "sampled": false,
+          "audit_required": false
+        },
+        "provenance": []
+      },
+      "expected": "REJECT (additionalProperties: confidence)"
+    },
+    {
+      "id": "er-fail-05-representation-confusion",
+      "description": "Representations are not interchangeable: the derived identifier is BARE 64-char lowercase hex. A sha256:-prefixed form MUST NOT be accepted where a bare digest is required, and vice versa.",
+      "bare_form_of_kat03": "c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1",
+      "prefixed_form_of_kat03": "sha256:c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1",
+      "expected": "REJECT on form mismatch (no silent stripping/adding of the prefix)"
+    },
+    {
+      "id": "er-fail-06-uppercase-hex",
+      "description": "Identifier validation is exactly [0-9a-f]{64}; uppercase hex MUST be rejected, not case-folded.",
+      "input_digest": "C65A52C39246A73F58F4D185B104BA1C1237E25198C5B5DEEAB1DE77E80232A1",
+      "expected": "REJECT (fails [0-9a-f]{64})"
+    },
+    {
+      "id": "er-fail-07-mutation-probe-single-byte",
+      "description": "A single-byte mutation of a valid record changes the digest. Pins that the identifier is a true content address over the whole canonical record.",
+      "input_file": "samples/er-00003-e4-operationally-conformant.json",
+      "mutation": "flip the agent_id first character",
+      "must_not_equal": "er-kat-03-e4-operationally-conformant.expected_digest_bare_hex"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+evidence-record-consumer
+Copyright 2026 Empire Labs Pty Ltd
+
+This product includes conformance vectors and sample artifacts vendored from
+narko4u/evidence-record-spec, which is licensed under the Apache License 2.0.
+The source commit and the SHA-256 of every vendored file are recorded in
+PROVENANCE.md.

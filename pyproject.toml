@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-record-consumer"
+version = "0.1.0"
+description = "Consumer of the registered evidence-record and evidence-appraisal artifact types: derive each identifier from the registered context and reject anything outside the closed vocabularies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Empire Labs Pty Ltd" }]
+keywords = ["evidence-record", "evidence-appraisal", "canonical-payload-binding", "jcs", "rfc8785"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://empirelabs.com.au"
+
+[project.scripts]
+evidence-record-consumer = "evidence_record_consumer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1.0",
+  "appraisal_id": "ea-00003",
+  "subject_record": {
+    "record_id": "er-00004",
+    "digest": "2a9af62bddd1513f8cdaa3c7046e8b921e87f700caff67ca14cd0d174c2b7aa7"
+  },
+  "e_grade": "E3",
+  "claim_type": "operationally-conformant",
+  "reconciliation_state": "contradiction",
+  "verifier_id": "verifier-beta",
+  "timestamp": "2026-08-28T12:10:00+00:00",
+  "signed": true
+}

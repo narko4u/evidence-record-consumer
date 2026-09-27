@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "er-00005",
+  "agent_id": "agent-d9",
+  "actor_chain": ["human-owner", "agent-d9", "tool-db-query"],
+  "timestamp": "2026-08-04T11:03:55Z",
+  "observation": {
+    "source": "security_sensor",
+    "relationship": "derived",
+    "directness": "inferred"
+  },
+  "verification": {
+    "vantage": "substrate",
+    "method": "reconstructed",
+    "basis": "substrate_reconstructed",
+    "basis_engines": ["security_sensor", "external_authority"]
+  },
+  "grade": "E3",
+  "claims": [
+    {
+      "claim": "emission-conformant",
+      "evidence": ["er-00005", "er-00005a", "er-00005b"]
+    }
+  ],
+  "reconciliation": {
+    "agent_claim": "agent queried customer table",
+    "boundary_observation": "reconstructed from security sensor logs",
+    "state": "agreement"
+  },
+  "integrity": {
+    "signed": true,
+    "chain_linked": true,
+    "timestamped": true
+  },
+  "declared_vs_observed": {
+    "permitted": "query customer table",
+    "occurred": "query observed in sensor logs (reconstructed)"
+  },
+  "sampling": {
+    "sampled": false,
+    "audit_required": true
+  },
+  "provenance": ["er-00005a", "er-00005b"]
+}

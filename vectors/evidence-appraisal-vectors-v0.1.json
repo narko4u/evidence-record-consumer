@@ -1,0 +1,103 @@
+{
+  "artifact_type": "evidence-appraisal",
+  "canonicalization": "jcs (RFC 8785, plain - no member removal, no code-point key sort; keys sorted per RFC 8785 section 3.2.3)",
+  "version": "0.1",
+  "source_commit": null,
+  "positive": [
+    {
+      "id": "ea-kat-01-e4-agreement",
+      "description": "Derived identifier = SHA-256 over the JCS canonical form of the full appraisal artifact (9-member closed field set per evidence-appraisal-0.1.schema.json; exclusion set empty). E4 agreement appraisal of er-00003.",
+      "input_file": "samples/ea-00001-e4-agreement.json",
+      "canonical_length_bytes": 345,
+      "expected_digest_bare_hex": "916265d4e0b36453ff809042385b571dd785cc56025366fbe53823a951dc030a",
+      "canonical_bytes_hex": "7b2261707072616973616c5f6964223a2265612d3030303031222c22636c61696d5f74797065223a226f7065726174696f6e616c6c792d636f6e666f726d616e74222c22655f6772616465223a224534222c227265636f6e63696c696174696f6e5f7374617465223a2261677265656d656e74222c22736368656d615f76657273696f6e223a22302e312e30222c227369676e6564223a747275652c227375626a6563745f7265636f7264223a7b22646967657374223a2263363561353263333932343661373366353866346431383562313034626131633132333765323531393863356235646565616231646537376538303233326131222c227265636f72645f6964223a2265722d3030303033227d2c2274696d657374616d70223a22323032362d30382d32385431313a33303a30302b30303a3030222c2276657269666965725f6964223a2276657269666965722d616c706861227d"
+    },
+    {
+      "id": "ea-kat-02-e0-no-independent-evidence",
+      "description": "Same digest context over the E0 no-independent-evidence appraisal of er-00001.",
+      "input_file": "samples/ea-00002-e0-no-independent-evidence.json",
+      "canonical_length_bytes": 354,
+      "expected_digest_bare_hex": "4f7809f8726d873723bdf15829fe778c4d8bc4f2077456a00095f779cf3c9f1d",
+      "canonical_bytes_hex": "7b2261707072616973616c5f6964223a2265612d3030303032222c22636c61696d5f74797065223a22656d697373696f6e2d636f6e666f726d616e74222c22655f6772616465223a224530222c227265636f6e63696c696174696f6e5f7374617465223a226e6f5f696e646570656e64656e745f65766964656e6365222c22736368656d615f76657273696f6e223a22302e312e30222c227369676e6564223a747275652c227375626a6563745f7265636f7264223a7b22646967657374223a2266306436306665363932366332383337303264376131343135393839336261353432373066343939643439643464303964666665636230383165393862613366222c227265636f72645f6964223a2265722d3030303031227d2c2274696d657374616d70223a22323032362d30382d32385431313a34353a30302b30303a3030222c2276657269666965725f6964223a2276657269666965722d616c706861227d"
+    },
+    {
+      "id": "ea-kat-03-e3-contradiction",
+      "description": "Same digest context over the E3 contradiction appraisal of er-00004.",
+      "input_file": "samples/ea-00003-e3-contradiction.json",
+      "canonical_length_bytes": 348,
+      "expected_digest_bare_hex": "7fe859560c3b0ee99bac02bc3034a3784dab8d1437aafef88240c0314456cee9",
+      "canonical_bytes_hex": "7b2261707072616973616c5f6964223a2265612d3030303033222c22636c61696d5f74797065223a226f7065726174696f6e616c6c792d636f6e666f726d616e74222c22655f6772616465223a224533222c227265636f6e63696c696174696f6e5f7374617465223a22636f6e74726164696374696f6e222c22736368656d615f76657273696f6e223a22302e312e30222c227369676e6564223a747275652c227375626a6563745f7265636f7264223a7b22646967657374223a2232613961663632626464643135313366386364616133633730343665386239323165383766373030636166663637636131346364306431373463326237616137222c227265636f72645f6964223a2265722d3030303034227d2c2274696d657374616d70223a22323032362d30382d32385431323a31303a30302b30303a3030222c2276657269666965725f6964223a2276657269666965722d62657461227d"
+    }
+  ],
+  "negative": [
+    {
+      "id": "ea-fail-01-grade-in-producer-record",
+      "description": "THE GRADE-LOCATION DISCRIMINATOR. An appraisal artifact cites its subject by typed digest (subject_record.record_id + subject_record.digest) and carries the verified grade in e_grade. A producer record that stamps its own appraisal-grade inside its digest-committed payload is a category error: the label is an output of appraisal, never a field the producer stamps. This pins the RATS split (evidence in, appraisal is the bridge, attestation out) that the producer artifact type deliberately does not satisfy.",
+      "expected": "An evidence-record MUST NOT contain an evidence-appraisal's e_grade semantics as a producer stamp; appraisals are separate verifier artifacts bound by digest. See evidence-appraisal schema discipline rule 1."
+    },
+    {
+      "id": "ea-fail-02-unregistered-grade",
+      "description": "e_grade is E0-E4 only. An appraisal concluding \"E5\" MUST be rejected.",
+      "input": {
+        "schema_version": "0.1.0",
+        "appraisal_id": "ea-fail-02",
+        "subject_record": {
+          "record_id": "er-00003",
+          "digest": "c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1"
+        },
+        "e_grade": "E5",
+        "claim_type": "operationally-conformant",
+        "reconciliation_state": "agreement",
+        "verifier_id": "verifier-alpha",
+        "timestamp": "2026-08-28T11:30:00+00:00",
+        "signed": true
+      },
+      "expected": "REJECT (e_grade not in [E0, E1, E2, E3, E4])"
+    },
+    {
+      "id": "ea-fail-03-unregistered-claim-type",
+      "description": "claim_type is exactly emission-conformant | operationally-conformant. Unknown value MUST be rejected.",
+      "input": {
+        "schema_version": "0.1.0",
+        "appraisal_id": "ea-fail-03",
+        "subject_record": {
+          "record_id": "er-00003",
+          "digest": "c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1"
+        },
+        "e_grade": "E4",
+        "claim_type": "maybe-conformant",
+        "reconciliation_state": "agreement",
+        "verifier_id": "verifier-alpha",
+        "timestamp": "2026-08-28T11:30:00+00:00",
+        "signed": true
+      },
+      "expected": "REJECT (claim_type not in [emission-conformant, operationally-conformant])"
+    },
+    {
+      "id": "ea-fail-04-subject-digest-not-bare-hex",
+      "description": "subject_record.digest is exactly [0-9a-f]{64}. Prefixed or uppercase forms MUST be rejected.",
+      "input": {
+        "schema_version": "0.1.0",
+        "appraisal_id": "ea-fail-04",
+        "subject_record": {
+          "record_id": "er-00003",
+          "digest": "sha256:c65a52c39246a73f58f4d185b104ba1c1237e25198c5b5deeab1de77e80232a1"
+        },
+        "e_grade": "E4",
+        "claim_type": "operationally-conformant",
+        "reconciliation_state": "agreement",
+        "verifier_id": "verifier-alpha",
+        "timestamp": "2026-08-28T11:30:00+00:00",
+        "signed": true
+      },
+      "expected": "REJECT (digest fails [0-9a-f]{64})"
+    },
+    {
+      "id": "ea-fail-05-mutation-probe-single-byte",
+      "description": "A single-byte mutation of a valid appraisal changes the digest. Pins the content address.",
+      "input_file": "samples/ea-00001-e4-agreement.json",
+      "mutation": "flip the verifier_id first character",
+      "must_not_equal": "ea-kat-01-e4-agreement.expected_digest_bare_hex"
+    }
+  ]
+}

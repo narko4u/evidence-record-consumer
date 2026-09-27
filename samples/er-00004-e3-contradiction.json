@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "er-00004",
+  "agent_id": "agent-c2",
+  "actor_chain": ["human-owner", "agent-c2", "tool-ssh"],
+  "timestamp": "2026-08-03T03:47:12Z",
+  "observation": {
+    "source": "gateway_proxy",
+    "relationship": "contradictory",
+    "directness": "direct_observation"
+  },
+  "verification": {
+    "vantage": "substrate",
+    "method": "intercepted",
+    "basis": "substrate_intercepted",
+    "basis_engines": ["gateway_proxy"]
+  },
+  "grade": "E3",
+  "claims": [
+    {
+      "claim": "emission-conformant",
+      "evidence": ["er-00004"]
+    }
+  ],
+  "reconciliation": {
+    "agent_claim": "agent did not access prod host",
+    "boundary_observation": "gateway recorded SSH connection to prod host at 03:47",
+    "state": "contradiction"
+  },
+  "integrity": {
+    "signed": true,
+    "chain_linked": true,
+    "timestamped": true
+  },
+  "declared_vs_observed": {
+    "permitted": "SSH to staging only",
+    "occurred": "SSH to prod host observed"
+  },
+  "sampling": {
+    "sampled": false,
+    "audit_required": true
+  },
+  "provenance": []
+}
