@@ -1,0 +1,19 @@
+# Citation File Format (CFF) - https://citation-file-format.github.io
+# Generated 2026-10-13 by Empire Labs. Fields are sourced from this repository's
+# real metadata (tags, releases, licence). No values are estimated.
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "evidence record consumer"
+abstract: "Consumer of the registered evidence-record and evidence-appraisal artifact types: derives each identifier from the registered context and refuses anything outside the closed vocabularies."
+authors:
+  - name: "Empire Labs Pty Ltd"
+    website: "https://www.empirelabs.com.au"
+    email: "contact@empirelabs.com.au"
+license: "Apache-2.0"
+repository-code: "https://github.com/narko4u/evidence-record-consumer"
+url: "https://www.empirelabs.com.au"
+keywords:
+  - "AI agent governance"
+  - "agentic AI"
+  - "AI compliance"
